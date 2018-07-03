@@ -1,0 +1,58 @@
+﻿<Page x:Class="ATMSim.SessionTransferPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="403" d:DesignWidth="644"
+      Title="SessionTransferPage">
+
+    <Grid Background="White">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="358" Margin="23,14,0,0" Source="Resources/atmlogoedited.png" Opacity="0.1"/>
+        <Button x:Name="TransferButton"  Content="Transfer" HorizontalAlignment="Left" Margin="451,40,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource NormalButton}" OverridesDefaultStyle="False" Click="TransferButton_Click"/>
+        <Button x:Name="ClearButton" Content="Clear" HorizontalAlignment="Left" Margin="451,110,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource WarningButton}" OverridesDefaultStyle="False" Click="ClearButton_Click"/>
+        <Button x:Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="451,212,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource WarningButton}" OverridesDefaultStyle="False" Click="CancelButton_Click"/>
+        <Button x:Name="SignOutButton" Content="Sign Out" HorizontalAlignment="Left" Margin="451,282,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource ErrorButton}" OverridesDefaultStyle="False" Click="SignOutButton_Click"/>
+        <Grid Height="83" Margin="124,40,263,262" Width="257">
+            <Rectangle HorizontalAlignment="Left" Height="83" Margin="0,0,0,0" Stroke="#006960" VerticalAlignment="Top" Width="257">
+                <Rectangle.Effect>
+                    <BlurEffect Radius="15"/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="label_Copy1" Content="Current available balance" Margin="34,10,10,41" FontSize="18" Foreground="#FF006960" FontFamily="Calibri"/>
+            <TextBlock x:Name="BalanceTextBlock" Text="Rs. 35045.00" Margin="68,37,37,10" FontSize="24" Foreground="#FF006960" FontFamily="Calibri" FontWeight="Bold"/>
+        </Grid>
+
+        <Grid Height="83" Margin="124,100,263,160" Width="257">
+            <Rectangle HorizontalAlignment="Left" Height="83" Margin="0,0,0,0" Stroke="#006960" VerticalAlignment="Top" Width="257">
+                <Rectangle.Effect>
+                    <BlurEffect Radius="15"/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="label_Copy12" Content="Transfer to (Acc. no)" HorizontalAlignment="Center" Margin="10,10,10,41" FontSize="18" Foreground="#FF006960" FontFamily="Calibri"/>
+            <TextBox Name="TransferAccountTextBox" HorizontalAlignment="Left" FontSize="22" Height="30" Margin="34,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="193" FontFamily="Calibri" Foreground="#FF003F39" SelectionBrush="#FF7FB4AF" PreviewTextInput="TransferAccountTextBox_PreviewTextInput" GotFocus="TransferAccountTextBox_GotFocus"/>
+
+        </Grid>
+
+        <Grid Height="83" Margin="124,160,263,52" Width="257">
+            <Rectangle HorizontalAlignment="Left" Height="83" Margin="0,0,0,0" Stroke="#006960" VerticalAlignment="Top" Width="257">
+                <Rectangle.Effect>
+                    <BlurEffect Radius="15"/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="label_Copy123" Content="Amount" HorizontalAlignment="Center" Margin="59,10,51,41" FontSize="18" Foreground="#FF006960" FontFamily="Calibri"/>
+            <Label x:Name="label_Copy223" Content="Rs." Margin="34,37,71,10" FontSize="24" Foreground="#FF006960" FontFamily="Calibri" FontWeight="Bold"/>
+            <TextBox Name="TransferAmountTextBox" HorizontalAlignment="Left" FontSize="22" Height="30" Margin="75,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="152" FontFamily="Calibri" Foreground="#FF003F39" SelectionBrush="#FF7FB4AF" PreviewTextInput="TransferAmountTextBox_PreviewTextInput" GotFocus="TransferAmountTextBox_GotFocus"/>
+
+        </Grid>
+    </Grid>
+</Page>

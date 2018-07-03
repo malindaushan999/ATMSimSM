@@ -1,0 +1,29 @@
+﻿<Page x:Class="ATMSim.SessionBalancePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ATMSim"
+      mc:Ignorable="d" 
+      d:DesignHeight="403" d:DesignWidth="644"
+      Title="SessionBalancePage">
+
+    <Grid>
+        <Grid Background="White">
+            <Image x:Name="image" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="358" Margin="23,14,0,0" Source="Resources/atmlogoedited.png" Opacity="0.1"/>
+            <Button x:Name="PrintButton" Content="Print Receipt" HorizontalAlignment="Left" Margin="451,50,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource NormalButton}" OverridesDefaultStyle="False" Click="PrintButton_Click"/>
+            <Button x:Name="CancelButton"  Content="Cancel" HorizontalAlignment="Left" Margin="451,120,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource WarningButton}" OverridesDefaultStyle="False" Click="CancelButton_Click"/>
+            <Button x:Name="SignOutButton" Content="Sign Out" HorizontalAlignment="Left" Margin="451,190,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource ErrorButton}" OverridesDefaultStyle="False" Click="SignOutButton_Click"/>
+            <Rectangle HorizontalAlignment="Left" Height="83" Margin="54,90,0,0" Stroke="#006960" VerticalAlignment="Top" Width="298">
+                <Rectangle.Effect>
+                    <BlurEffect Radius="15"/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="label_Copy1" Content="Current available balance" Margin="79,98,356,272" FontSize="18" Foreground="#FF006960" FontFamily="Calibri"/>
+            <TextBlock x:Name="BalanceTextBlock" Text="Rs. 35045.00" Margin="129,120,310,247" FontSize="24" Foreground="#FF006960" FontFamily="Calibri" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</Page>

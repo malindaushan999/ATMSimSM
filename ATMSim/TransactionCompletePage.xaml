@@ -1,0 +1,32 @@
+﻿<Page x:Class="ATMSim.TransactionCompletePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ATMSim"
+      mc:Ignorable="d" 
+      d:DesignHeight="403" d:DesignWidth="644"
+      Title="TransactionCompletePage">
+
+    <Grid Background="White">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="358" Margin="23,14,0,0" Source="Resources/atmlogoedited.png" Opacity="0.1"/>
+        <Button x:Name="BackToMainButton"  Content="Back To Main" HorizontalAlignment="Left" Margin="451,55,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource WarningButton}" OverridesDefaultStyle="False" Click="BackToMainButton_Click"/>
+        <Button x:Name="SignOutButton" Content="Sign Out" HorizontalAlignment="Left" Margin="451,125,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource ErrorButton}" OverridesDefaultStyle="False" Click="SignOutButton_Click"/>
+        <Grid Margin="54,90,292,112">
+            <Rectangle HorizontalAlignment="Left" Height="201" Stroke="#006960" VerticalAlignment="Top" Width="298">
+                <Rectangle.Effect>
+                    <BlurEffect Radius="15"/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="White" Opacity="0.8"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label x:Name="label_Copy1" Content="Transaction complete!!" Margin="25,8,64,160" FontSize="18" Foreground="#FF006960" FontFamily="Calibri"/>
+            <Label x:Name="label_Copy2" Content="Don't forget to sign out!" Margin="25,30,18,135" FontSize="18" Foreground="#FF006960" FontFamily="Calibri"/>
+            <TextBlock x:Name="TransactionDetailsTextBox" HorizontalAlignment="Left" Margin="49,71,0,0" TextWrapping="Wrap" Text="Account No: " VerticalAlignment="Top" Foreground="#FF006960"/>
+            <Grid Margin="25,149,18,0" x:Name="NotesGrid">
+
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

@@ -1,0 +1,20 @@
+﻿<Page x:Class="ATMSim.SessionMainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ATMSim"
+      mc:Ignorable="d" 
+      d:DesignHeight="403" d:DesignWidth="644"
+      Title="SessionMainPage">
+
+    <Grid Background="White">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="358" VerticalAlignment="Top" Width="358" Margin="23,14,0,0" Source="Resources/atmlogoedited.png" Opacity="0.1"/>
+        <Button x:Name="BalanceButton" Content="Balance" HorizontalAlignment="Left" Margin="451,50,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource NormalButton}" OverridesDefaultStyle="False" Click="BalanceButton_Click"/>
+        <Button x:Name="WithdrawButton"  Content="Withdraw" HorizontalAlignment="Left" Margin="451,120,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource NormalButton}" OverridesDefaultStyle="False" Click="WithdrawButton_Click"/>
+        <Button x:Name="TransferButton" Content="Transfer" HorizontalAlignment="Left" Margin="451,190,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource NormalButton}" OverridesDefaultStyle="False" Click="TransferButton_Click"/>
+        <Button x:Name="SignOutButton" Content="Sign Out" HorizontalAlignment="Left" Margin="451,260,0,0" VerticalAlignment="Top" Width="193" Background="#FF009688" Foreground="White" Height="50" FontSize="20" IsDefault="True" Style="{DynamicResource ErrorButton}" OverridesDefaultStyle="False" Click="SignOutButton_Click"/>
+        <Label x:Name="label_Copy1" Content="Welcome" Margin="31,95,219,173" FontSize="48" Foreground="#FF006960" FontFamily="Verdana" FontWeight="Bold"/>
+        <TextBlock x:Name="NameTextBlock" Text="A.B.C. Rathnayake" Margin="129,159,338,208" FontSize="24" Foreground="#FF006960" FontFamily="Utsaah" FontWeight="Bold"/>
+    </Grid>
+</Page>
